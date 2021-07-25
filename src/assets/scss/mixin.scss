@@ -1,0 +1,37 @@
+@mixin breakpoint( $breakpoint ) {
+	@if 'mobile-portrait' == $breakpoint {
+		@media ( max-width: 500px ) {
+			@content;
+		}
+	}
+	@else if 'mobile' == $breakpoint {
+		@media ( max-width:768px ) {
+			@content;
+		}
+	}
+	@else if 'small' == $breakpoint {
+		@media ( max-width:900px ) {
+			@content;
+		}
+	}
+	@else if 'tablet' == $breakpoint {
+		@media ( max-width:1024px ) {
+			@content;
+		}
+	}
+	@else if 'tablet-landscape' == $breakpoint {
+		@media ( max-width:1024px ) and ( min-height:700px ) {
+			@content;
+		}
+	}
+	@else if 'tablet-portrait' == $breakpoint {
+		@media ( min-width: 768px ) and ( max-width: 1023px ) {
+			@content;
+		}
+	}
+	@else if 'desktop-only' == $breakpoint {
+		@media ( min-width: 1025px ) {
+			@content;
+		}
+	}
+}

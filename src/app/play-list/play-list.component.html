@@ -1,0 +1,9 @@
+
+<div class="main-container">
+  <h1>Featured Play List</h1>
+  <div class="content">
+    <div *ngFor="let item of playList; index as i">
+      <app-play-list-item  [playListItem] = "item"> </app-play-list-item>
+     </div>
+  </div>
+</div>
